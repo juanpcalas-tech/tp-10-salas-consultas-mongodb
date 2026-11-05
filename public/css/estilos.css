@@ -1,0 +1,234 @@
+:root {
+  font-family: descendants, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #26231f;
+  background: #cfb58b;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #17675d;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #0f4942;
+}
+
+
+.encabezadopagina,
+.piepagina,
+.contenedor {
+  width: min(70rem, calc(100% - 2rem));
+  margin-inline: auto;  
+}
+
+.encabezadopagina {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid #884c0f;
+}
+
+.encabezadopagina nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.empresa {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #26231f;
+  text-decoration:double  ;
+}
+
+.empresa img {
+  flex: 0 0 auto;
+}
+
+.contenedor {
+  flex: 1;
+  padding-block: 3rem;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.hero,
+.estado,
+.panel-formulario {
+  max-width: 45rem;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid #d8d0c5;
+  border-radius: 1.25rem;
+  background: #fffdf9;
+  box-shadow: 0 1rem 2.5rem rgb(75 63 48 / 8%);
+}
+
+.detalle{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  max-width: 45rem;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid #b88d52;
+  border-radius: 1.25rem;
+  background: #fffdf9;
+  box-shadow: 1 1rem 2.5rem rgb(75 63 48 / 8%);
+  
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  line-height: 1.05;
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+.etiqueta {
+  margin-bottom: 0.5rem;
+  color: #8a4b21;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.boton,
+button {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 0.65rem;
+  background: #ad8842;
+  color: white;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover,
+button:hover {
+  background: #4b3811;
+  color: white;
+}
+
+.cabecera-pagina {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cabecera-pagina h1 {
+  margin-bottom: 0;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding: 1.25rem;
+  border: 2px solid #1f1e1c;
+  border-radius: 0.9rem;
+  background: rgb(226, 205, 147);
+}
+
+.formulario {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.formulario label {
+  font-weight: 800;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #a79c8e;
+  border-radius: 0.5rem;
+  background: white;
+  color: inherit;
+  font: inherit;
+}
+
+.formulario button {
+  justify-self: start;
+  margin-top: 0.5rem;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #f4ca76;
+  outline-offset: 3px;
+}
+
+.error {
+  padding: 0.75rem 1rem;
+  border-left: 0.3rem solid #b42318;
+  background: #fff0ed;
+  color: #7a271a;
+  font-weight: 700;
+}
+
+.piepagina {
+  padding-block: 1.25rem;
+  border-top:  1px solid #884c0f;;
+  color: #c46f21;
+  text-shadow: #b47018 0.1em 0.1em 0.2em ;
+}
+
+.pie p {
+  margin-bottom: 0;
+  
+}
+
+@media (max-width: 38rem) {
+  .encabezadopagina,
+  .cabecera-pagina {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
